@@ -116,9 +116,9 @@ h1 {
     border: 3px dotted var(--texto);
     padding: 10px;
     height: 100%;
-    line-height: 17px;
+    line-height: 20px;
     cursor: pointer;
-    overflow: auto;
+    overflow: scroll;
 
 }
 
@@ -158,6 +158,11 @@ h1 {
 .abierto .sobre::before{
     transform: rotateX(180deg);
     z-index: 0;
+}
+
+.abierto .corazon {
+    transform: rotate(90deg);
+    transition-delay: 0.4s;
 }
 
 .carta.mostrar-carta {
