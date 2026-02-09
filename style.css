@@ -132,4 +132,63 @@ h1 {
     transform: translate(-50%,0) rotate(45deg);
     transition: transform 0.5s ease-in-out 1s;
     z-index: 6;
+    cursor: pointer;
+}
+
+.corazon::before,
+.corazon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--corazon);
+    border-radius: 80%;
+
+}
+
+.corazon::before {
+    top: -15px;
+
+}
+
+.corazon::after {
+    right: 15px;
+}
+
+.abierto .sobre::before{
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.carta.mostrar-carta {
+    transform: translateY(-290px);
+    transition: transform .5s ease-in-out;
+}
+
+.carta.abierto {
+    z-index: 1000;
+}
+
+.carta.cerrando-carta {
+    transform: translateY(-290px);
+    transition: transform .5s ease-in-out;
+}
+.envoltura-sobre.desacvtivar-sobre {
+    pointer-events: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cuerpo-sobre);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--corazon);
 }
